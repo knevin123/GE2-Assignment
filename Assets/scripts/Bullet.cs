@@ -6,9 +6,8 @@ public class Bullet : MonoBehaviour {
     public float speed = 10;
 	// Use this for initialization
 	void Start () {
-        Invoke("KillMe", 5);
+        Invoke("KillMe", 10);
 	}
-
     void KillMe()
     {
         GameObject.Destroy(this.gameObject);

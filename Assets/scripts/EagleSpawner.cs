@@ -38,8 +38,8 @@ public class EagleSpawner : MonoBehaviour {
 		}
 		follower.transform.parent = this.transform;
 		follower.transform.rotation = this.transform.rotation;
-		OffsetPursue op = follower.AddComponent<OffsetPursue>();
-		op.leader = leader;
+		//OffsetPursue op = follower.AddComponent<OffsetPursue>();
+		//op.leader = leader;
 		return follower;
 	}
 

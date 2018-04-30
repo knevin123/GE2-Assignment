@@ -7,6 +7,7 @@ TagManager:
   - Base
   - Hawk
   - hawkLeader
+  - Bullet
   layers:
   - Default
   - TransparentFX

@@ -24,13 +24,15 @@ public class Shooting : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Vector3 directionToTarget = transform.position - target.transform.position;
-		float angle = Vector3.Angle (directionToTarget,transform.forward);
-		if (Mathf.Abs (angle) < 90) {
-			Debug.Log ("target infront");
+		Vector3 directionToTarget = target.transform.position -transform.position;
+		float angle = Vector3.Angle( directionToTarget,transform.forward);
+		//Debug.Log (Mathf.Abs(angle));
+		if (Mathf.Abs (angle) < 30) {
+			//Debug.Log ("target is in front of me");
 			if (fire == true) {
 				StartCoroutine ("Shoot");
 			}
 		}
+		
 	}
 }
