@@ -6,9 +6,9 @@ using UnityEngine;
 
 public class Pursue : SteeringBehaviour
 {
-    public Boid target;
+	public GameObject target;
     Vector3 targetPos;
-
+	public Boid tar;
     public void Start()
     {
 
@@ -26,11 +26,12 @@ public class Pursue : SteeringBehaviour
 
     public override Vector3 Calculate()
     {
+		tar=target.GetComponent<Boid> ();
         float dist = Vector3.Distance(target.transform.position, transform.position);
         float time = dist / boid.maxSpeed;
 
         targetPos = target.transform.position
-            + (time * target.velocity);
+            + (time * tar.velocity);
 
         return boid.SeekForce(targetPos);
     }

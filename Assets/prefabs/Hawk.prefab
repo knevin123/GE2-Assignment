@@ -465,6 +465,7 @@ GameObject:
   - component: {fileID: 114990990228780824}
   - component: {fileID: 114681926827227630}
   - component: {fileID: 65552817521708928}
+  - component: {fileID: 114886821982372378}
   m_Layer: 0
   m_Name: Hawk
   m_TagString: Hawk
@@ -7554,7 +7555,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1356142865044166}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 13, y: 8, z: 40}
@@ -7603,6 +7604,23 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   mass: 1
   maxSpeed: 10
+--- !u!114 &114886821982372378
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1356142865044166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25e727438782dff4483c065a5b90488f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
+  force: {x: 0, y: 0, z: 0}
+  boid: {fileID: 0}
+  fleeDistance: 50
+  slowingDistance: 10
+  target: {fileID: 0}
 --- !u!114 &114990990228780824
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7618,3 +7636,4 @@ MonoBehaviour:
   force: {x: 0, y: 0, z: 0}
   boid: {fileID: 0}
   target: {fileID: 0}
+  tar: {fileID: 0}

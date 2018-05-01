@@ -13,7 +13,7 @@ public class Shooting : MonoBehaviour {
 		bullet.transform.position = bulletSpawnPoint.transform.position;
 		bullet.transform.rotation = transform.rotation;
 		fire = false;
-		yield return new WaitForSeconds (2);
+		yield return new WaitForSeconds (4);
 		fire = true;
 
 	}

@@ -8,6 +8,10 @@ TagManager:
   - Hawk
   - hawkLeader
   - Bullet
+  - Eagle
+  - hawk
+  - path
+  - EagleLead
   layers:
   - Default
   - TransparentFX

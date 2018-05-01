@@ -13,9 +13,9 @@ public class CollisionController : MonoBehaviour {
 	void Update () {
 		
 	}
-	public void OnCollisionEnter(Collision collision){
+	public void OnTriggerEnter(Collider collision){
 		if (collision.gameObject.tag == "Bullet") {
-			Destroy (this.gameObject, 1);
+			Destroy (this.gameObject);
 		}
 	}
 }
