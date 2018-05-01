@@ -1,15 +1,22 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\CollisionController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\OffsetPursue.cs">
     <Files>
       <File FileName="Assets\scripts\EnemyManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\EagleController.cs" Line="52" Column="23" />
-      <File FileName="Assets\scripts\EagleSpawner.cs" Line="42" Column="5" />
-      <File FileName="Assets\scripts\Shooting.cs" Line="16" Column="37" />
-      <File FileName="Assets\scripts\HawkSpawner.cs" Line="44" Column="11" />
-      <File FileName="Assets\scripts\Pursue.cs" Line="11" Column="18" />
+      <File FileName="Assets\scripts\EagleController.cs" Line="98" Column="37" />
+      <File FileName="Assets\scripts\EagleSpawner.cs" Line="43" Column="38" />
+      <File FileName="Assets\scripts\HawkSpawner.cs" Line="59" Column="8" />
+      <File FileName="Assets\scripts\Shooting.cs" Line="31" Column="44" />
+      <File FileName="Assets\scripts\Pursue.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\Flee.cs" Line="10" Column="10" />
-      <File FileName="Assets\scripts\CollisionController.cs" Line="22" Column="1" />
+      <File FileName="Assets\scripts\CollisionController.cs" Line="20" Column="49" />
+      <File FileName="Assets\scripts\Seek.cs" Line="34" Column="4" />
+      <File FileName="Assets\scripts\FollowPath.cs" Line="31" Column="34" />
+      <File FileName="Assets\scripts\OffsetPursue.cs" Line="37" Column="43" />
+      <File FileName="Assets\scripts\Bullet.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\CameraController.cs" Line="15" Column="18" />
+      <File FileName="Assets\scripts\EagleFollow.cs" Line="20" Column="55" />
+      <File FileName="Assets\scripts\CameraSwitch.cs" Line="11" Column="27" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
