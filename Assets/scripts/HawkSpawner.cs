@@ -56,7 +56,7 @@ public class HawkSpawner : MonoBehaviour {
 		//rand = Random.onUnitSphere * 1000;
 		leader.transform.parent = this.transform;
 		leader.transform.position = new Vector3
-			(150
+			(200
 				,Random.Range(50f,100f)
 				,-300
 			);

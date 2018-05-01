@@ -18,7 +18,7 @@ public class EagleSpawner : MonoBehaviour {
 		GameObject leader = GameObject.Instantiate<GameObject>(prefab);
 		enemies = GameObject.FindGameObjectsWithTag ("hawk");
 		leader.transform.parent = this.transform;
-		leader.transform.position = pos1;
+		leader.transform.position = pos2;
 		leader.transform.rotation = this.transform.rotation;
 		leader.tag = "EagleLead";
 		shoot = leader.GetComponent<Shooting> ();
@@ -40,7 +40,7 @@ public class EagleSpawner : MonoBehaviour {
 		GameObject follower = GameObject.Instantiate<GameObject>(prefab);
 		follower.tag = "Eagle";
 		if (i == 1) {
-			follower.transform.position = pos2;	
+			follower.transform.position = pos1;	
 			seek = follower.GetComponent<Seek> ();
 			seek.targetGameObject = enemies[1];
 			shoot = follower.GetComponent<Shooting> ();

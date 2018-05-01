@@ -12,6 +12,10 @@ TagManager:
   - hawk
   - path
   - EagleLead
+  - cam1
+  - cam2
+  - cam3
+  - cam4
   layers:
   - Default
   - TransparentFX

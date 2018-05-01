@@ -4934,6 +4934,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1968930272772398
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4586080824058658}
+  m_Layer: 0
+  m_Name: Cam
+  m_TagString: cam2
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1973174369482756
 GameObject:
   m_ObjectHideFlags: 1
@@ -5133,6 +5148,7 @@ Transform:
   m_Children:
   - {fileID: 4305009485030984}
   - {fileID: 4599182505097868}
+  - {fileID: 4586080824058658}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7690,6 +7706,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4305009485030984}
   m_RootOrder: 167
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4586080824058658
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1968930272772398}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 23.2, z: -49.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4008635474160630}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4587025778900180
 Transform:
@@ -21657,7 +21686,7 @@ MonoBehaviour:
   acceleration: {x: 0, y: 0, z: 0}
   velocity: {x: 0, y: 0, z: 0}
   mass: 1
-  maxSpeed: 10
+  maxSpeed: 7
 --- !u!114 &114593996562709134
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -21787,7 +21816,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1645725502
+  randomSeed: -449479228
   InitialModule:
     serializedVersion: 3
     enabled: 1
