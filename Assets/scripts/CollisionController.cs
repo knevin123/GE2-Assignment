@@ -15,7 +15,9 @@ public class CollisionController : MonoBehaviour {
 	}
 	public void OnTriggerEnter(Collider collision){
 		if (collision.gameObject.tag == "Bullet") {
-			Destroy (this.gameObject);
+			ParticleSystem explosion = GetComponent<ParticleSystem> ();
+			explosion.Play ();
+			Destroy (this.gameObject,explosion.duration);
 		}
 	}
 }

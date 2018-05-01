@@ -95,7 +95,7 @@ class Patrol : State
 	{
 		allies = GameObject.FindGameObjectsWithTag ("Eagle");
 		if (allies.Length == 0) {
-			owner.ChangeState (new Pause ());
+			owner.ChangeState (new SoloAttack ());
 		}
 	}
 	public override void Exit()
@@ -103,7 +103,7 @@ class Patrol : State
 
 	}
 }
-class Pause : State
+class SoloAttack : State
 {
 	Boid l;
 	Seek seek;

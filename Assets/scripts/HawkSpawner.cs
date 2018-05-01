@@ -34,10 +34,10 @@ public class HawkSpawner : MonoBehaviour {
 				shoot2.enabled = !shoot2.enabled;
 				shoot2.target= enemies[0];
 				follower.tag = "hawk";
-				follower.transform.position = new Vector3(-150,70,130);
+				follower.transform.position = new Vector3(-500,70,-200);
 				follower = GameObject.Instantiate<GameObject>(prefab);
 				follower.tag = "hawk";
-				follower.transform.position = new Vector3(-150,70,100);
+				follower.transform.position = new Vector3(-500,70,-230);
 				Shooting shoot3 = follower.GetComponent<Shooting>();
 				shoot3.enabled = !shoot3.enabled;
 				shoot3.target= enemies[1];
