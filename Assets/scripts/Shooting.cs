@@ -26,8 +26,9 @@ public class Shooting : MonoBehaviour {
 	void Update () {
 		Vector3 directionToTarget = target.transform.position -transform.position;
 		float angle = Vector3.Angle( directionToTarget,transform.forward);
+		float distance = directionToTarget.magnitude;
 		//Debug.Log (Mathf.Abs(angle));
-		if (Mathf.Abs (angle) < 30) {
+		if (Mathf.Abs (angle) < 30 && distance<60) {
 			//Debug.Log ("target is in front of me");
 			if (fire == true) {
 				StartCoroutine ("Shoot");

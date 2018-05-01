@@ -1518,7 +1518,6 @@ GameObject:
   - component: {fileID: 114088097802588208}
   - component: {fileID: 114845541596287078}
   - component: {fileID: 114313165015278040}
-  - component: {fileID: 54978394004655896}
   - component: {fileID: 114593996562709134}
   - component: {fileID: 114317439224611400}
   - component: {fileID: 114955242935640278}
@@ -1526,6 +1525,7 @@ GameObject:
   - component: {fileID: 114298519165260030}
   - component: {fileID: 65839794808154110}
   - component: {fileID: 114194062514140956}
+  - component: {fileID: 114969085612393160}
   m_Layer: 0
   m_Name: Eagle
   m_TagString: Untagged
@@ -21517,21 +21517,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1175711389268814}
   m_Mesh: {fileID: 4300236, guid: eb58f5264defe684fac42ad1300ecc4c, type: 3}
---- !u!54 &54978394004655896
-Rigidbody:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1280629002895180}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!65 &65839794808154110
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -21539,7 +21524,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1280629002895180}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 23, y: 11, z: 40}
@@ -21670,7 +21655,7 @@ MonoBehaviour:
   acceleration: {x: 0, y: 0, z: 0}
   velocity: {x: 0, y: 0, z: 0}
   mass: 1
-  maxSpeed: 5
+  maxSpeed: 10
 --- !u!114 &114593996562709134
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -21729,3 +21714,14 @@ MonoBehaviour:
   force: {x: 0, y: 0, z: 0}
   boid: {fileID: 0}
   leader: {fileID: 0}
+--- !u!114 &114969085612393160
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1280629002895180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95e4dd06e6b0ccb4e9c9df6c8ed16e70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

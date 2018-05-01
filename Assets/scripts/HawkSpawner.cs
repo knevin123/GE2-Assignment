@@ -10,35 +10,40 @@ public class HawkSpawner : MonoBehaviour {
 	Vector3 rand;
 	public GameObject target;
 	public GameObject enemy;
-	bool spawn;
+	bool spawn=false;
 	bool end=false;
+	GameObject[] enemies;
 	System.Collections.IEnumerator SpawnHawks(){
 		yield return new WaitForSeconds (5);
 		while (end==false) {
+			yield return new WaitForSeconds (1);
 			GameObject[] hawk = GameObject.FindGameObjectsWithTag ("hawk");
-			Debug.Log (hawk.Length);
+			enemies = GameObject.FindGameObjectsWithTag ("Eagle");
+			//Debug.Log (hawk.Length);
 			if (hawk.Length == 0) {
 				spawn = true;
 			}
-			if (hawk.Length == 3) {
+			if (hawk.Length == 2) {
 				spawn = false;
 			}
 			if (spawn) {
-				GameObject leader = GameObject.Instantiate<GameObject>(prefab);
-				leader.transform.parent = this.transform;
-				leader.transform.position = new Vector3(100,40,100);
-				leader.transform.rotation = this.transform.rotation;
-				leader.tag = "hawk";
-				for (int i = 1; i <=followers; i++)
-				{
-					Vector3 offset = new Vector3(gap * i, 0, - gap * i);
-					GameObject follower = GameObject.Instantiate<GameObject>(prefab);
-					follower.tag = "hawk";
-					follower.transform.position = leader.transform.TransformPoint(offset);
-					offset = new Vector3(- gap * i, 0, - gap * i);
-					follower = GameObject.Instantiate<GameObject>(prefab);
-					follower.transform.position = leader.transform.TransformPoint(offset);
-				}
+				GameObject follower = GameObject.Instantiate<GameObject>(prefab);
+				Seek seek2 = follower.AddComponent<Seek>();
+				seek2.targetGameObject = enemies[0];
+				Shooting shoot2 = follower.GetComponent<Shooting>();
+				shoot2.enabled = !shoot2.enabled;
+				shoot2.target= enemies[0];
+				follower.tag = "hawk";
+				follower.transform.position = new Vector3(-150,70,130);
+				follower = GameObject.Instantiate<GameObject>(prefab);
+				follower.tag = "hawk";
+				follower.transform.position = new Vector3(-150,70,100);
+				Shooting shoot3 = follower.GetComponent<Shooting>();
+				shoot3.enabled = !shoot3.enabled;
+				shoot3.target= enemies[1];
+				Seek seek3 = follower.AddComponent<Seek>();
+				seek3.targetGameObject = enemies[1];
+
 				end = true;
 			}
 		}
@@ -51,9 +56,9 @@ public class HawkSpawner : MonoBehaviour {
 		//rand = Random.onUnitSphere * 1000;
 		leader.transform.parent = this.transform;
 		leader.transform.position = new Vector3
-			(300
+			(150
 				,Random.Range(50f,100f)
-				,-500
+				,-300
 			);
 		leader.transform.rotation = this.transform.rotation;
 		target = GameObject.FindGameObjectWithTag ("Base");
@@ -68,7 +73,7 @@ public class HawkSpawner : MonoBehaviour {
 			offset = new Vector3(- gap * i, 0, - gap * i);
 			follower = CreateFollower(offset, leader.GetComponent<Boid>());            
 		}
-		//StartCoroutine (SpawnHawks());
+		StartCoroutine (SpawnHawks());
 	}
 
 	GameObject CreateFollower(Vector3 offset, Boid leader)

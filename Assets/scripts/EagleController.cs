@@ -119,18 +119,26 @@ class Pause : State
 		seek = owner.GetComponent<Seek> ();
 		shoot = owner.GetComponent<Shooting> ();
 		offset = owner.GetComponent<OffsetPursue> ();
-		//wander = owner.GetComponent<Wander> ();
-		pathFollow.enabled = !pathFollow.enabled;
-		//offset.enabled = !offset.enabled;
+		pathFollow = owner.GetComponent<FollowPath> ();
 		seek.enabled =!seek.enabled;
 		shoot.enabled = !shoot.enabled;
-		//wander.enabled = !wander.enabled;
+		seek.targetGameObject=GameObject.FindGameObjectWithTag ("hawk");
+		shoot.target = GameObject.FindGameObjectWithTag ("hawk");
+		pathFollow.enabled = !pathFollow.enabled;
+
 	}
 	public override void Think()
 	{
-		allies = GameObject.FindGameObjectsWithTag ("Eagle");
-		if (allies.Length == 0) {
-			owner.ChangeState (new Pause ());
+		GameObject[] enemies;
+		if (seek.targetGameObject == null) {
+			seek.targetGameObject = GameObject.FindGameObjectWithTag ("hawk");
+		}
+		if (shoot.target == null) {
+			shoot.target = GameObject.FindGameObjectWithTag ("hawk");
+		}
+		enemies = GameObject.FindGameObjectsWithTag ("hawk");
+		if (enemies.Length == 0) {
+			owner.ChangeState (new Patrol ());
 		}
 	}
 	public override void Exit()
